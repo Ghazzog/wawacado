@@ -30,7 +30,7 @@ header {
     background-color: #4c6244; /* Dark Green for contrast */
     padding: 10px 0;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     position: sticky;
     top: 0;
@@ -54,15 +54,13 @@ header .logo img {
     margin: 0; /* Ensure no margins */
     padding: 0; /* Ensure no padding */
     display: block; /* Ensure image acts as block element */
-
 }
-
-
 
 .nav-buttons {
     display: flex;
     gap: 30px;
-    justify-content: center;
+    justify-content: center; /* Keep nav buttons centered */
+    flex: 1; 
     list-style: none;
     font-family: 'Poppins', sans-serif; /* Apply Poppins font to buttons */
 }
@@ -78,6 +76,12 @@ header .logo img {
 .nav-buttons a:hover {
     color: #fff; /* Change color on hover */
 }
+
+.header-icons {
+    display: flex; /* Align icons in a row */
+    margin-right: 20px; /* Add margin to the right for spacing */
+}
+
 .banner {
     position: relative; /* Establishes positioning context for children */
     overflow: hidden; /* Prevents overflow */
@@ -133,14 +137,52 @@ main {
     }
 }
 
+section {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    width: 100%; /* Full width of the viewport */
+    display: flex; /* Layout for the content */
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    overflow: hidden; /* Ensure content doesn't overflow */
+    border-bottom: 1px solid #4c6244;
+  }
 
+
+.button {
+    margin-left: 10px; /* Space between links */
+    text-decoration: none; /* Remove underline */
+    padding: 10px 15px; /* Add padding */ /* Button background color */
+    color: #f3e6c5; /* Text color */
+    border-radius: 5px; /* Rounded corners *//* Smooth transition */
+}
+
+#links {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    width: 100%;
+    overflow: hidden; /* Ensures content doesn't overflow the section */
+  }
+  
+  .bg-image {
+    position: absolute; /* Positioning the image absolutely within the section */
+    top: 0;
+    left: 0;
+    width: 100%; /* Make the image fill the entire width */
+    height: 100%; /* Make the image fill the entire height */
+    object-fit: cover; /* Ensure the image covers the entire area */
+    z-index: 0; /* Set this to 0 to stay behind content but above the body */
+  }
+  
+  .content {
+    position: relative;
+    z-index: 1; /* Ensures the content stays above the background image */
+    color: white; /* Optional: for better visibility of text */
+  }
+  
 
 /* Section Styling */
-section {
-    height: 100vh; /* Full viewport height */
-    display: flex; /* Use flexbox to layout text and image */
-    border-bottom: 1px solid #4c6244;
-}
+
 
 
 .container {
