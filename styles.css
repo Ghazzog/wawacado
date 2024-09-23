@@ -58,12 +58,15 @@ header .logo img {
 
 .nav-buttons {
     display: flex;
+    flex-grow: 1; /* Allow nav buttons to take available space */
     gap: 30px;
     justify-content: center; /* Keep nav buttons centered */
     flex: 1; 
     list-style: none;
     font-family: 'Poppins', sans-serif; /* Apply Poppins font to buttons */
+    padding-left: 150px;
 }
+
 
 .nav-buttons a {
     text-decoration: none;
